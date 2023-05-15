@@ -885,7 +885,7 @@ class GSE(BaseGEO):
                 left_on=gsm_on,
                 right_on=gpl_on,
             )
-            .set_index(gsm_on)
+            .set_index(annotation_column)
         )
         del ndf[gpl_on]
         ndf.columns.name = "name"
